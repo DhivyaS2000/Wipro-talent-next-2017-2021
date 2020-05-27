@@ -1,0 +1,16 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class SOL {
+    static public String move(String s)
+    {
+        return s.replaceALL("[A-Z]+"," ")+s.replaceALL("[^A-Z]+"," ");
+    }
+    public static void main(String args[] )  {
+        String str="foOTBall";
+        System.out.println("After Operation");
+    }
+}
