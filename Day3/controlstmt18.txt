@@ -1,4 +1,4 @@
-[10:41, 5/29/2020] 😊: import java.util.*;
+ import java.util.*;
 
 class Main {
   public static void main(String[] args) {
