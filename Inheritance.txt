@@ -1,0 +1,39 @@
+class Main{
+  void eat()
+  {
+    System.out.println("eat Mthd");
+  }
+  void sleep()
+  {
+    System.out.println("sleep Mthd");
+  }
+}
+class Bird extends Main
+{
+  @Override
+  void eat()
+  {
+    System.out.println("Override eat Mthd");
+  }
+  void sleep()
+  {
+    System.out.println("Override sleep Mthd");
+  }
+  void fly()
+  {
+    System.out.println("fly method");
+  }
+}
+class AnimalsDemo
+{
+  public static void main(String[] args)
+  {
+    Animal a=new Animal();
+  	Bird b=new Bird();
+  	a.eat();
+  	a.sleep();
+  	b.eat();
+  	b.sleep();
+  	b.fly();
+}
+}
