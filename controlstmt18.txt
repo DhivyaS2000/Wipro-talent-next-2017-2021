@@ -1,0 +1,23 @@
+[10:41, 5/29/2020] 😊: import java.util.*;
+
+class Main {
+  public static void main(String[] args) {
+    Scanner s=new Scanner(System.in);
+    System.out.println("enter number:");
+    int n=s.nextInt();
+    int rev_int = 0, rem, ori_int;
+    ori_int = n;
+     while( n != 0 )
+        {
+            rem = n % 10;
+            rev_int = rev_int * 10 + rem;
+            n /= 10;
+        }
+
+        
+        if (ori_int == rev_int)
+            System.out.println(ori_int + " is a palindrome.");
+        else
+            System.out.println(ori_int + " is not a palindrome.");
+    }
+}
