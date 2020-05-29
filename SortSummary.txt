@@ -1,0 +1,83 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+
+
+class Result {
+
+    /*
+     * Complete the 'groupSort' function below.
+     *
+     * The function is expected to return a 2D_INTEGER_ARRAY.
+     * The function accepts INTEGER_ARRAY arr as parameter.
+     */
+
+
+    
+    private static void sortArrayElementsByFrquency(int[] inputArray){
+        Map<Integer,Integer>elementCountMap=new LinkedHashMap<>();
+        for(int i=0;i<inputArray.length;i++)
+        {
+            if(elementCountMap.containskey(inputarray[i]))
+            {
+                elementCountMap.put(inputArray[i],elementCountMap.get(inputArray[i]+1));
+            }
+            else{
+                elementCountMap.put(inputArray[i],1);
+            }
+        }
+        ArrayList<Integer>sortedElements=new ArrayList<>();
+        for(int i=1;i<=entry.getValue();i++)
+        sortedElements.add(entry.getKey());
+    }
+    System.out.println("Input Array:"+Arrays.toString(inputArray));
+    System.out.println("Sorted Array Elements In Descending Order of their frequency:");
+    System.out.println(sortedElements);
+}
+
+    }
+    }
+
+}
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        int arrCount = Integer.parseInt(bufferedReader.readLine().trim());
+
+        List<Integer> arr = new ArrayList<>();
+
+        for (int i = 0; i < arrCount; i++) {
+            int arrItem = Integer.parseInt(bufferedReader.readLine().trim());
+            arr.add(arrItem);
+        }
+
+        List<List<Integer>> result = Result.groupSort(arr);
+
+        for (int i = 0; i < result.size(); i++) {
+            for (int j = 0; j < result.get(i).size(); j++) {
+                bufferedWriter.write(String.valueOf(result.get(i).get(j)));
+
+                if (j != result.get(i).size() - 1) {
+                    bufferedWriter.write(" ");
+                }
+            }
+
+            if (i != result.size() - 1) {
+                bufferedWriter.write("\n");
+            }
+        }
+
+        bufferedWriter.newLine();
+
+        bufferedReader.close();
+        bufferedWriter.close();
+    }
+}
