@@ -10,14 +10,7 @@ import java.util.regex.*;
 
 class Result {
 
-    /*
-     * Complete the 'fewestCoins' function below.
-     *
-     * The function is expected to return an INTEGER.
-     * The function accepts STRING coins as parameter.
-     */
-
-    public static int fewestCoins(String coins) {
+        public static int fewestCoins(String coins) {
     
         int i=Integer.parseInt(coins);
         return i;
