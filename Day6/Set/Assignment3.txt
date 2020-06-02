@@ -1,0 +1,39 @@
+
+  
+import java.util.TreeSet;
+import java.util.Iterator;
+class Main {
+  public static void main(String[] args) {
+    
+  TreeSet<String> set = new TreeSet<>();
+		
+		set.add("Bob");
+		set.add("Alice");
+		set.add("John");
+		set.add("Mathew");
+		
+		System.out.println("Original tree set:" + set);  
+	
+    Iterator it = set.descendingIterator();
+    System.out.println("Elements in Reverse Order:");
+     while (it.hasNext()) {
+        System.out.println(it.next());
+     }
+
+		    String query = "John";
+		  boolean result = false;
+		Iterator<String> itr = set.iterator();
+		while (itr.hasNext()) {
+			if (itr.next().equals(query)) {
+				result = true;
+				break;
+			}
+		}
+		System.out.println("Exist or Not:");
+		if (result) System.out.println(query + " exists");
+		else System.out.println(query + " does not exist");
+
+	}
+
+}
+		
