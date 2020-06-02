@@ -1,0 +1,24 @@
+import java.util.TreeSet;
+import java.util.Iterator;
+
+
+ class Country {
+	TreeSet<String> ts = new TreeSet<>();
+	
+	
+	TreeSet<String> saveCountryNames(String CountryName) {
+		ts.add(CountryName);
+		return ts;
+	}
+	
+	public String getCountry(String CountryName) {
+		Iterator<String> it = ts.iterator();
+		
+		while (it.hasNext()) {
+			if (it.next().equals(CountryName))
+				return CountryName;
+		}
+		
+		return null;
+	}
+}
