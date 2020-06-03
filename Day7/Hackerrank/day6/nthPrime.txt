@@ -1,0 +1,41 @@
+import java.io.*;
+import java.util.*;
+class UserMainCode
+{
+  public int NthPrime(int input1){
+    if (input1 == 1) 
+    return 2;
+		if (input1 == 2) 
+    return 3;
+		if (input1 == 3) 
+    return 5;
+		if (input1 == 4) 
+    return 7;
+		
+		int i = 5;
+		int number = 10;
+		int nthPrime = 11;
+		
+		while(true) {
+			boolean prime = true;
+			
+			for (int j = 2; j < number; j++) {
+				if (number % j == 0) 
+          prime = false;
+			}
+			
+			if (prime == true) {
+				nthPrime = number;
+				return(i + "thPrime: " + nthPrime);
+        }
+				if (i == input1){
+        break;
+				i++;
+        }
+			}
+			
+			number++;
+		}
+		
+		return nthPrime;
+}
